@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="/css/styles.css" rel="stylesheet">
+</head>
+
+<body class="bg-secondary text-white">
+    <div class="container">
+        <h1 class="text-center">Url Shortener</h1>
+        <img src='/images/urlshort.jpg' alt="Url length shortened">
+        <form action="/shortUrls" method="POST" class="my-4 form-inline">
+            <label for="fullUrl" class="sr-only">Url</label>
+            <input placeholder="https://" type="Url" name="fullUrl" id="fullUrl" class="form-control col mr-2">
+            <button class="btn btn-primary" type="submit">Shorten</button>
+        </form>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Full Url</th>
+                    <th>Short Url</th>
+                    <th>Clicks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% shortUrls.forEach(shortUrl=>{ %>
+                <tr>
+                    <td><a href="<%=shortUrl.full%>"><%=shortUrl.full%></a></td>
+                    <td><a href="<%=shortUrl.short%>"><%=shortUrl.short%></a></td>
+                    <td><%=shortUrl.clicks%></td>
+                </tr>
+                <%})%>
+
+            </tbody>
+        </table>
+    </div>
+    <span>
+        Made with <i class="fas fa-heart"></i> by Srijit Mukherjee
+    </span>
+</body>
+
+</html>

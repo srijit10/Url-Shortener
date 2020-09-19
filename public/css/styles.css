@@ -1,0 +1,17 @@
+h1{
+    position:relative;
+}
+img{
+    margin:auto;
+    display: block;
+}
+table {
+    width: 50% ;
+    margin: auto;
+    background-color:aliceblue;
+}
+span{
+    display:table;
+    margin: 0 auto;
+    color:ghostwhite;
+}
