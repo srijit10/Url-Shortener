@@ -20,4 +20,5 @@ heroku git:remote -a thawing-inlet-61413
     /*.env
 - commit all the files changed 
 - git push heroku master
-**Your node js app is deployed**
+**Node js app is deployed**
+[Navigate to the Project](https://frozen-sea-98449.herokuapp.com)
